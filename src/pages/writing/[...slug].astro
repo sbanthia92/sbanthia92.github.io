@@ -1,0 +1,21 @@
+---
+import { Image } from 'astro:assets';
+import { render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import { getPosts, fmtDate } from '../../data/queries';
+export async function getStaticPaths() {
+  return (await getPosts()).map((p) => ({ params: { slug: p.id }, props: { post: p } }));
+}
+const { post } = Astro.props;
+const { Content } = await render(post);
+const d = post.data;
+---
+<Base title={d.title} description={d.description}>
+  <article class="prose">
+    <a class="mono" href="/writing" style="color:var(--muted);text-decoration:none">← Writing</a>
+    <h1 class="page">{d.title}</h1>
+    <div class="mono" style="color:var(--muted);margin-bottom:28px">{fmtDate(d.date)}</div>
+    {d.cover && <Image class="cover" src={d.cover} alt="" widths={[800, 1400]} />}
+    <div class="md"><Content /></div>
+  </article>
+</Base>

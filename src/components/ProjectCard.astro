@@ -1,0 +1,17 @@
+---
+import { Image } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
+interface Props { project: CollectionEntry<'projects'> }
+const { project } = Astro.props;
+const { title, summary, tags, cover, coverAlt } = project.data;
+---
+<a class="card" href={`/projects/${project.id}`}>
+  <div class="thumb mono">
+    {cover ? <Image src={cover} alt={coverAlt} widths={[480, 800]} sizes="(max-width:700px) 100vw, 460px" /> : <span>{title}</span>}
+  </div>
+  <div class="body">
+    <h3>{title}</h3>
+    <p>{summary}</p>
+    <div class="tags mono">{tags.slice(0, 5).map((t) => <span>{t}</span>)}</div>
+  </div>
+</a>
