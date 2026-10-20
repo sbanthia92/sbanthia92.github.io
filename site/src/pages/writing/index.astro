@@ -1,0 +1,11 @@
+---
+import Base from '../../layouts/Base.astro';
+import PostList from '../../components/PostList.astro';
+import { getPosts } from '../../data/queries';
+const posts = await getPosts();
+---
+<Base title="Writing" description="Essays and notes.">
+  <h1 class="page">Writing</h1>
+  <p class="lede">Essays and notes. Add a markdown file to <code>src/content/writing</code> and it shows up here.</p>
+  <PostList posts={posts} />
+</Base>

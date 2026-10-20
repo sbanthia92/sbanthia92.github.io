@@ -1,0 +1,22 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { render } from 'astro:content';
+interface Props { items: CollectionEntry<'experience'>[]; showHighlights?: boolean }
+const { items, showHighlights = true } = Astro.props;
+const fmt = (s?: string) => {
+  if (!s) return 'Present';
+  const [y, m] = s.split('-');
+  return m ? new Date(+y, +m - 1).toLocaleDateString('en-US', { month: 'short', year: 'numeric' }) : y;
+};
+---
+{items.length === 0 ? <div class="empty mono">Experience coming soon.</div> : items.map((e) => (
+  <div class="job">
+    <div class="when mono">{fmt(e.data.start)} — {fmt(e.data.end)}</div>
+    <div>
+      <h3>{e.data.role}</h3>
+      <div class="co">{e.data.url ? <a href={e.data.url}>{e.data.company}</a> : e.data.company}{e.data.location && ` · ${e.data.location}`}</div>
+      <div>{e.data.summary}</div>
+      {showHighlights && e.data.highlights.length > 0 && <ul>{e.data.highlights.map((h) => <li>{h}</li>)}</ul>}
+    </div>
+  </div>
+))}

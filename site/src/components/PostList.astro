@@ -1,0 +1,14 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { fmtDate } from '../data/queries';
+interface Props { posts: CollectionEntry<'writing'>[] }
+const { posts } = Astro.props;
+---
+{posts.length === 0 ? <div class="empty mono">Nothing published yet.</div> : (
+  <div class="posts">{posts.map((p) => (
+    <a class="post" href={`/writing/${p.id}`}>
+      <div class="date mono">{fmtDate(p.data.date)}</div>
+      <div><h3>{p.data.title}</h3><p>{p.data.description}</p></div>
+    </a>
+  ))}</div>
+)}

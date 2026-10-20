@@ -1,0 +1,23 @@
+---
+import Base from '../layouts/Base.astro';
+import { site, interests, education, skills } from '../data/site';
+---
+<Base title="About" description={`About ${site.name}`}>
+  <h1 class="page">About</h1>
+  <div class="prose md">
+    <p>I'm {site.name}, a staff-level software engineer with 10+ years building distributed systems and cloud-native infrastructure on AWS and GCP. I've driven org-wide technical initiatives at Amazon, Oracle and Harness, and I enjoy leading and mentoring engineers through greenfield builds and large re-architectures.</p>
+    <p>These days I'm focused on AI engineering, building systems with Claude, MCP and agentic workflows, both at work and in side projects.</p>
+  </div>
+  <section class="block" style="margin-top:40px">
+    <div class="sec-head"><h2>Skills</h2></div>
+    {skills.map((k) => <div class="interest"><h3>{k.group}</h3><p>{k.items}</p></div>)}
+  </section>
+  <section class="block">
+    <div class="sec-head"><h2>Education</h2></div>
+    {education.map((e) => <div class="interest"><h3>{e.year}</h3><p>{e.degree}, {e.school}</p></div>)}
+  </section>
+  <section class="block">
+    <div class="sec-head"><h2>Outside work</h2></div>
+    {interests.length === 0 ? <div class="empty mono">Hobbies coming soon.</div> : interests.map((i) => <div class="interest"><h3>{i.title}</h3><p>{i.note}</p></div>)}
+  </section>
+</Base>

@@ -1,0 +1,11 @@
+---
+import Base from '../layouts/Base.astro';
+import ExperienceList from '../components/ExperienceList.astro';
+import { getExperience } from '../data/queries';
+const items = await getExperience();
+---
+<Base title="Experience" description="Where I've worked and what I shipped.">
+  <h1 class="page">Experience</h1>
+  <p class="lede">Roles and what I got done in them.</p>
+  <ExperienceList items={items} />
+</Base>

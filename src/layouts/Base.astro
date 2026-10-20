@@ -15,7 +15,6 @@ const path = Astro.url.pathname;
   <meta name="description" content={description} />
   <meta property="og:title" content={full} />
   <meta property="og:description" content={description} />
-  <link rel="alternate" type="application/rss+xml" title={site.name} href="/rss.xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet" />
@@ -38,7 +37,6 @@ const path = Astro.url.pathname;
       <span>
         <a href={`mailto:${site.email}`}>Email</a>
         {site.social.map((s) => <> · <a href={s.url}>{s.label}</a></>)}
-        · <a href="/rss.xml">RSS</a>
       </span>
     </footer>
   </div>

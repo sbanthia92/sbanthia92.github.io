@@ -1,0 +1,28 @@
+---
+import { Image } from 'astro:assets';
+import { render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import { getProjects } from '../../data/queries';
+export async function getStaticPaths() {
+  return (await getProjects()).map((p) => ({ params: { slug: p.id }, props: { project: p } }));
+}
+const { project } = Astro.props;
+const { Content } = await render(project);
+const d = project.data;
+---
+<Base title={d.title} description={d.summary}>
+  <article class="prose">
+    <a class="mono" href="/projects" style="color:var(--muted);text-decoration:none">← Projects</a>
+    <h1 class="page">{d.title}</h1>
+    <p class="lede" style="margin-bottom:16px">{d.summary}</p>
+    <div class="tags mono">{d.tags.map((t) => <span>{t}</span>)}</div>
+    {d.links.length > 0 && <div class="linkrow mono">{d.links.map((l) => <a class="btn" href={l.url}>{l.label} ↗</a>)}</div>}
+  </article>
+  {d.cover && <Image class="cover" src={d.cover} alt={d.coverAlt} widths={[800, 1400]} sizes="(max-width:960px) 100vw, 920px" />}
+  <article class="prose md"><Content /></article>
+  {d.gallery.length > 0 && (
+    <div class="gallery">{d.gallery.map((g) => (
+      <figure><Image src={g.src} alt={g.alt} widths={[600, 1000]} sizes="(max-width:700px) 100vw, 450px" />{g.caption && <figcaption>{g.caption}</figcaption>}</figure>
+    ))}</div>
+  )}
+</Base>
