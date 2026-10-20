@@ -14,6 +14,4 @@ npm run build
 ```
 
 ## Custom domain
-1. Set `site` in `astro.config.mjs` to `https://shubhambanthia.com`.
-2. Add `public/CNAME` containing `shubhambanthia.com`.
-3. Add DNS records at the registrar (see GitHub Pages docs), then enable "Enforce HTTPS" in repo Pages settings.
+Served at https://shubhambanthia.com (`public/CNAME`, `site` in `astro.config.mjs`). DNS is on Cloudflare: four `A` records and a `www` CNAME to `sbanthia92.github.io`, all DNS-only (not proxied).
