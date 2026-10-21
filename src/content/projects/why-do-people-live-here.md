@@ -3,6 +3,8 @@ title: Why Do People Live Here?
 summary: Automated X pipeline that researches obscure remote settlements and posts a daily explainer.
 order: 4
 tags: [Python, LLM pipeline, PostgreSQL, X API]
+cover: ../../assets/projects/why-do-people-live-here/banner.png
+coverAlt: Why Do People Live Here? banner
 links:
   - { label: Source, url: "https://github.com/sbanthia92/why-do-people-live-here" }
 ---
