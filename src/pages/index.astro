@@ -12,8 +12,7 @@ const posts = (await getPosts()).slice(0, 3);
 <Base>
   <section class="hero">
     <div class="kicker mono">{site.tagline}</div>
-    <h1>Hi, I'm Shubham. <em>Backend engineer</em> by trade.</h1>
-    <p>10+ years of distributed systems and cloud infrastructure at Amazon, Oracle and Harness. Currently having fun with AI agents.</p>
+    <h1>10+ years of distributed systems and cloud infrastructure at Amazon, Oracle and Harness. Currently having fun with <em>AI agents</em>.</h1>
     <div class="links mono">
       <a href="/projects">See projects →</a>
       {site.social.map((s) => <a href={s.url}>{s.label} ↗</a>)}
