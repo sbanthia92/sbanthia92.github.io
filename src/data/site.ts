@@ -32,3 +32,13 @@ export const skills = [
   { group: 'Cloud', items: 'AWS (Security Guardian certified), GCP, Terraform, Kubernetes, Docker' },
   { group: 'AI', items: 'Claude API and tool use, MCP servers, RAG, text-to-SQL, Ollama, agentic systems' },
 ];
+
+// Headline numbers shown on the home page. All from the resume.
+export const highlights = [
+  { stat: '100+', label: 'engineers adopted the LLM-powered SSH agent I led as their standard tool', where: 'Oracle' },
+  { stat: '17.4s → 0.85s', label: 'on a 100K-device request, across 7 high-volume infrastructure APIs', where: 'Oracle' },
+  { stat: '120 → 25', label: 'high-severity tickets per week after a DevSecOps overhaul', where: 'Amazon' },
+  { stat: '45 → 10 days', label: 'deployment cycles, alongside a 50% faster security review', where: 'Amazon' },
+  { stat: '$2.5M / yr', label: 'saved re-architecting AWS phone PIN verification in-house', where: 'Amazon' },
+  { stat: '−67%', label: 'planogram finalization time on a first-of-its-kind serverless platform', where: 'Amazon' },
+];

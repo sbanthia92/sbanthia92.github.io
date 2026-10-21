@@ -3,7 +3,7 @@ import Base from '../layouts/Base.astro';
 import ProjectCard from '../components/ProjectCard.astro';
 import ExperienceList from '../components/ExperienceList.astro';
 import PostList from '../components/PostList.astro';
-import { site } from '../data/site';
+import { site, highlights } from '../data/site';
 import { getProjects, getExperience, getPosts } from '../data/queries';
 const projects = (await getProjects()).filter((p) => p.data.featured);
 const experience = (await getExperience()).slice(0, 3);
@@ -17,6 +17,19 @@ const posts = (await getPosts()).slice(0, 3);
       <a href="/projects">See projects →</a>
       {site.social.map((s) => <a href={s.url}>{s.label} ↗</a>)}
       <a href={`mailto:${site.email}`}>Email</a>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="sec-head"><h2>Highlights</h2><a class="mono" href="/experience">Experience →</a></div>
+    <div class="stats">
+      {highlights.map((h) => (
+        <div class="stat">
+          <div class="num">{h.stat}</div>
+          <p>{h.label}</p>
+          <div class="where mono">{h.where}</div>
+        </div>
+      ))}
     </div>
   </section>
 
