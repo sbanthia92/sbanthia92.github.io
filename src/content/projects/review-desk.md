@@ -15,4 +15,4 @@ Review Desk reviews a draft the way a careful editor would, and shows its source
 - **Copy edits** that keep your voice.
 - **Originality notes** on sentences that closely match text found online.
 
-It runs locally with your own API keys, as an MCP tool or from the command line.
+It runs as a local process on your machine, as an MCP tool or from the command line, and calls the Anthropic and Tavily APIs with your own keys. Nothing is sent to me.

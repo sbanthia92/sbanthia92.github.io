@@ -8,7 +8,7 @@ coverFit: contain
 coverAlt: Why Do People Live Here? banner
 gallery:
   - { src: ../../assets/projects/why-do-people-live-here/post-thread-start.jpg, alt: "A Why Do People Live Here thread on X about Neutral Moresnet with a map card", caption: "Post 1 carries the map card; the thread continues with the story." }
-  - { src: ../../assets/projects/why-do-people-live-here/post-thread-replies.jpg, alt: "Later posts in the Neutral Moresnet thread", caption: "Later posts in the thread, ending with the source reply." }
+  - { src: ../../assets/projects/why-do-people-live-here/post-thread-replies.jpg, alt: "Later posts in the Neutral Moresnet thread", caption: "Posts 3 and 4, ending with the source reply." }
 links:
   - { label: Follow on X, url: "https://x.com/WhyLiveHereX" }
   - { label: Source, url: "https://github.com/sbanthia92/why-do-people-live-here" }
