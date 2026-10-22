@@ -3,6 +3,10 @@ title: fpl-context-mcp
 summary: MCP server that gives any AI agent a queryable Premier League database plus live injury and availability flags.
 order: 2
 tags: [Python, MCP, PostgreSQL, Open source]
+cover: ../../assets/projects/fpl-context-mcp/fixtures.webp
+coverAlt: Claude Code showing GW8 fixtures with difficulty ratings, fetched through fpl-context-mcp
+gallery:
+  - { src: ../../assets/projects/fpl-context-mcp/picks.webp, alt: Claude Code suggesting three forwards using fpl-context-mcp, caption: "Asking for three forwards: the agent calls the MCP server three times and compares expected points, fixtures, form and ownership." }
 links:
   - { label: Source, url: "https://github.com/sbanthia92/fpl-context-mcp" }
 ---
