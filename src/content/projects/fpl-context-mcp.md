@@ -6,7 +6,7 @@ tags: [Python, MCP, PostgreSQL, Open source]
 cover: ../../assets/projects/fpl-context-mcp/fixtures.webp
 coverAlt: Claude Code showing GW8 fixtures with difficulty ratings, fetched through fpl-context-mcp
 gallery:
-  - { src: ../../assets/projects/fpl-context-mcp/picks.webp, alt: Claude Code suggesting three forwards using fpl-context-mcp, caption: "Asking for three forwards: the agent calls the MCP server three times and compares expected points, fixtures, form and ownership." }
+  - { src: ../../assets/projects/fpl-context-mcp/picks.webp, alt: Claude Code suggesting three forwards using fpl-context-mcp, caption: "Asked for three forwards, the agent queried the MCP server and ranked players on expected points, fixtures, form and ownership." }
 links:
   - { label: Source, url: "https://github.com/sbanthia92/fpl-context-mcp" }
 ---
