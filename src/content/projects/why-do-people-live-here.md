@@ -6,7 +6,11 @@ tags: [Python, LLM pipeline, PostgreSQL, X API]
 cover: ../../assets/projects/why-do-people-live-here/banner.png
 coverFit: contain
 coverAlt: Why Do People Live Here? banner
+gallery:
+  - { src: ../../assets/projects/why-do-people-live-here/post-thread-start.jpg, alt: "A Why Do People Live Here thread on X about Neutral Moresnet with a map card", caption: "Post 1 carries the map card; the thread continues with the story." }
+  - { src: ../../assets/projects/why-do-people-live-here/post-thread-replies.jpg, alt: "Later posts in the Neutral Moresnet thread", caption: "Later posts in the thread, ending with the source reply." }
 links:
+  - { label: Follow on X, url: "https://x.com/WhyLiveHereX" }
   - { label: Source, url: "https://github.com/sbanthia92/why-do-people-live-here" }
 ---
 Each post is grounded in source-verified facts, passed through two yes/no editorial gates, and rotated across regions and settlement categories to keep the feed varied.
