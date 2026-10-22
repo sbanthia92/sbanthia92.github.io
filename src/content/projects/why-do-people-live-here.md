@@ -4,6 +4,7 @@ summary: Automated X pipeline that researches obscure remote settlements and pos
 order: 4
 tags: [Python, LLM pipeline, PostgreSQL, X API]
 cover: ../../assets/projects/why-do-people-live-here/banner.png
+coverFit: contain
 coverAlt: Why Do People Live Here? banner
 links:
   - { label: Source, url: "https://github.com/sbanthia92/why-do-people-live-here" }

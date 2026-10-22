@@ -15,6 +15,7 @@ const projects = defineCollection({
       tags: z.array(z.string()).default([]),
       cover: image().optional(),
       coverAlt: z.string().default(''),
+      coverFit: z.enum(['cover', 'contain']).default('cover'), // contain = show whole image on cards, no cropping
       gallery: z.array(z.object({ src: image(), alt: z.string(), caption: z.string().optional() })).default([]),
       links: z.array(z.object({ label: z.string(), url: z.string().url() })).default([]),
     }),

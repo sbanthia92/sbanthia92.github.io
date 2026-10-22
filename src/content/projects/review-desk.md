@@ -4,6 +4,7 @@ summary: Evidence-backed, multi-agent document reviewer exposed as a single MCP 
 order: 3
 tags: [Python, Multi-agent, MCP, Web search]
 cover: ../../assets/projects/review-desk/review.webp
+coverFit: contain
 coverAlt: Review Desk feedback in Claude Code listing factual errors, unverified claims, counter-case and copy edits
 links:
   - { label: Source, url: "https://github.com/sbanthia92/review-desk" }
