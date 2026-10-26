@@ -51,5 +51,22 @@ The Gaffer (`gaffer`), fpl-context-mcp, Review Desk, Why Do People Live Here? (r
 - `src/content/writing/hello.md` is a hidden draft example; replace or delete.
 - Review Desk screenshot text is still small on the card; a tighter 16:9 crop would help.
 
+## Potential next features
+Ideas, roughly by value for effort. Move an item to "Structure" above once built, and delete it from here.
+1. **Social preview image**: Open Graph / Twitter card image per page (currently only title and description), so shared links look good.
+2. **Favicon and site icon**: simple SB mark; none set yet.
+3. **Resume page / PDF**: `/resume` page rendered from the experience collection, plus a downloadable PDF. Keep the public-resume-only content rule.
+4. **Writing upgrades**: tags page and tag filters, reading time, previous/next links, code highlighting theme that matches light/dark, optional MDX. RSS was removed on request; re-add only if asked.
+5. **Project detail upgrades**: "Built with" and "What I learned" sections, per-project metrics, and a live demo embed (for example a Gaffer iframe or video).
+6. **Analytics**: privacy-friendly page views (Cloudflare Web Analytics is free and the domain is already on Cloudflare).
+7. **Contact**: simple form via a static form service, or keep mailto. No server code.
+8. **Search**: client-side search over projects and writing (Pagefind works with static Astro).
+9. **Now / Uses pages**: short pages on current focus and tooling; easy to extend later.
+10. **Timeline view** for experience, with company logos (only with permission to use them).
+11. **Tests and checks**: a CI step for link checking, Lighthouse and accessibility (axe), and a check that pushes touching content also update `CLAUDE.md` (pre-push or CI).
+12. **Image workflow**: script to crop and resize screenshots to the right aspect for cards and strip phone status bars.
+13. **Project-card polish**: per-project accent color and an optional `coverPosition` field alongside `coverFit`.
+14. **Mobile and performance pass**: check all pages at phone width, lazy-load gallery, preload fonts.
+
 ## Commits
 Commit messages end with the Co-Authored-By line for Claude. Work directly on `main`; each push deploys.
