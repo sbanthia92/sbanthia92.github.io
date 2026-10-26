@@ -50,7 +50,6 @@ The Gaffer (`gaffer`), fpl-context-mcp, Review Desk, Why Do People Live Here? (r
 - Hobbies section on About is a placeholder (`interests` in `site.ts`).
 - `src/content/writing/hello.md` is a hidden draft example; replace or delete.
 - Review Desk screenshot text is still small on the card; a tighter 16:9 crop would help.
-- Optional: add `CLAUDE.md` to `review-desk` and `why-do-people-live-here` repos.
 
 ## Commits
 Commit messages end with the Co-Authored-By line for Claude. Work directly on `main`; each push deploys.
